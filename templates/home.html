@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Review Classifier App</title>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #dbeafe, #e0f2fe);
+            font-family: Cambria, serif;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .card {
+            background: white;
+            width: 500px;
+            margin: auto;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #1e3a8a;
+        }
+
+        input[type="file"] {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .msg {
+            margin-top: 20px;
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+        function showMsg() {
+            document.getElementById("waitMsg").innerHTML =
+                "Please wait... your file is downloading ⏳";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="card">
+        <h1>Review Classifier</h1>
+
+        <form method="POST" enctype="multipart/form-data" onsubmit="showMsg()">
+            <input type="file" name="file" required>
+            <br>
+            <button type="submit">Analyze Reviews</button>
+        </form>
+
+        <div class="msg" id="waitMsg">{{ msg }}</div>
+    </div>
+</body>
+</html>

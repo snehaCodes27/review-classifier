@@ -1,0 +1,7 @@
+reviews,score,label
+food was awesome !!,0.6892,Positive
+movie was not that good :(,0.0,Neutral
+book is interesting,0.4019,Positive
+very terrifying movie,-0.6115,Negative
+book was very knowledgeable,0.0,Neutral
+movie was interesting :),0.6908,Positive
